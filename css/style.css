@@ -22,6 +22,7 @@ html{
     --fontsize: 1em;
     --anchomaximo: 68.750em;
     --margingrid:1em;
+    --padding: 0.625em;
 }
 
 img{
@@ -38,4 +39,90 @@ body{
 .container{
     max-width: var(--anchomaximo);
     margin: 0 auto;
+}
+
+/* INICIO HEADER */
+header .nav-top{
+    background-color: var(--color-secundario);
+    padding: calc(var(--padding)*2) 0px;
+}
+
+/* flex permite justificar los bordes y centrar los objetos */
+header .nav-top .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a{
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+header .nav-top a span{
+    display: none;
+}
+header .nav-top a i{
+    font-size: 150%;
+}
+
+header nav {
+    padding: calc(var(--padding)*2);
+}
+
+header nav .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+header nav .logo img{
+    max-width: 6.250em;
+}
+
+header nav ul{
+    width: 100%;
+}
+header nav .hamburguesa{
+    /* cursor pointer hacer que funcione como un enlace */
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+header nav .hamburguesa div{
+    border-top: 2px solid #aaa;
+    margin-bottom: 10px;
+    width: 1.875em;
+    right: 0;
+}
+
+
+
+
+/* FINAL HEADER */
+
+
+
+/* MEDIAQUERIS */
+
+@media(min-width: 600px){
+
+}
+
+@media(min-width: 768px){
+    header .nav-top a span{
+        display: inline;
+        color: white;
+        font-size: 110%;
+        margin-left: 5px;
+    }
+
+}
+
+@media(min-width: 1004px){
+
 }
