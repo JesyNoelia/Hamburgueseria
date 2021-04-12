@@ -75,22 +75,19 @@ header nav .container{
     justify-content: space-between;
 }
 
-
-
-
 header nav .logo img{
     max-width: 6.250em;
 }
 
 header nav ul{
     width: 100%;
+    
 }
 header nav .hamburguesa{
     /* cursor pointer hacer que funcione como un enlace */
     cursor: pointer;
-    position: relative;
+    
 }
-
 
 
 header nav .hamburguesa div{
@@ -99,6 +96,29 @@ header nav .hamburguesa div{
     width: 1.875em;
     right: 0;
 }
+
+header nav .menu li a{
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: calc(var(--padding)*1.5);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a{
+    /* sobre el ultimo li su a va sin borde */
+    border-bottom: 0;
+}
+
+header nav .menu li a.activo, 
+header nav .menu li a:hover{
+    /* a.activo, dentro de a hay una clase activo */
+    color: var(--color-principal);
+}
+
+
 
 
 
@@ -124,5 +144,21 @@ header nav .hamburguesa div{
 }
 
 @media(min-width: 1004px){
+    header nav .hamburguesa{
+        display: none;
+    }
+    header nav ul{
+        width: auto;
+    }
+    header nav .menu li{
+        display: inline-block;
+    }
+    header nav .menu li a{
+        padding: 0.5em var(--padding);
+        border-bottom: none;
+    }
+    header{
+        box-shadow: 0px 1px 15px gray;
+    }
 
 }
