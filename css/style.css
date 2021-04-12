@@ -156,6 +156,93 @@ footer a:hover{
 /* FINAL FOOTER */
 
 
+/* INICIO HERO */
+.hero{
+    background-image: url(../images/images/fondo.jpg);
+    height: 60vh;
+    /* para hacer foco en la parte de la imagen que me interesa en dispositivos pequeños */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    background-color:#777;
+    /* para fusiona las capas de fondo y la imagen */
+    background-blend-mode: multiply;
+    
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.hero h1{
+    font-family: var(--fuente-secundaria);
+    font-size: 2.25em;
+}
+
+.hero h2{
+    color: var(--color-principal);
+    margin: var(--margingrid) 0;
+    font-size: 1.25em;
+
+}
+.hero p{
+    font-size: 1.15em;
+}
+
+.hero .social li{
+    display: inline-block;
+    margin-right: var(--margingrid);
+    font-size: 2em;
+    
+}
+
+.hero .social li a{
+    color: white;
+}
+
+.boton {
+    background-color: var(--color-principal);
+    color: white;
+    display: inline-block;
+    padding: 1.15em;
+    margin: var(--margingrid) 0;
+    text-decoration: none;
+    border: 1px solid var(--color-principal);
+}
+
+.boton:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+}
+
+.boton:hover i{
+    transform: translateX(5px);
+    transition: 0.5s;
+}
+
+
+
+
+/* FINAL HERO */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MEDIAQUERIS */
 
