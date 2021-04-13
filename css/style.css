@@ -1,0 +1,433 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+/* 
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif; 
+*/
+
+html{
+    /* para generar scroll animado de puntos de ancla, solo se hace en el html por que solo el html tiene scroll */
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    /* defino variables que se van a repetir en mi codigo */
+    --color-principal:#fa573a;
+    --color-secundario:#21242e;
+    --fuente-principal:'Montserrat', sans-serif;
+    --fuente-secundaria: 'Handlee', cursive;
+    --fontsize: 1em;
+    --anchomaximo: 68.750em;
+    --margingrid:1em;
+    --padding: 0.625em;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body{
+    font-family: var(--fuente-principal);
+    font-size: var(--fontsize);
+}
+main p{
+    color: #666;
+    /* interlineado */
+    line-height: 1.25em;
+}
+
+.container{
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+/* INICIO HEADER */
+header .nav-top{
+    background-color: var(--color-secundario);
+    padding: calc(var(--padding)*2) 0px;
+}
+
+/* flex permite justificar los bordes y centrar los objetos */
+header .nav-top .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a{
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+header .nav-top a span{
+    display: none;
+}
+header .nav-top a i{
+    font-size: 150%;
+}
+
+header nav {
+    padding: calc(var(--padding)*2);
+}
+
+header nav .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav .logo img{
+    max-width: 6.250em;
+}
+
+header nav ul{
+    width: 100%;
+    
+}
+header nav .hamburguesa{
+    /* cursor pointer hacer que funcione como un enlace */
+    cursor: pointer;
+    
+}
+
+
+header nav .hamburguesa div{
+    border-top: 2px solid #aaa;
+    margin-bottom: 10px;
+    width: 1.875em;
+    right: 0;
+}
+
+header nav .menu li a{
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: calc(var(--padding)*1.5);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a{
+    /* sobre el ultimo li su a va sin borde */
+    border-bottom: 0;
+}
+
+header nav .menu li a.activo, 
+header nav .menu li a:hover{
+    /* a.activo, dentro de a hay una clase activo */
+    color: var(--color-principal);
+}
+
+/* FINAL HEADER */
+
+
+
+
+/* INICIO FOOTER */
+
+footer{
+    background-color: var(--color-secundario);
+    padding: calc(var(--padding)*2) 0px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color: var(--color-principal);
+}
+
+.flecha a{
+    display: block;
+    color: var(--color-principal);
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    font-size: 300%;
+}
+
+/* FINAL FOOTER */
+
+
+/* INICIO HERO */
+.hero{
+    background-image: url(../images/images/fondo.jpg);
+    height: 60vh;
+    /* para hacer foco en la parte de la imagen que me interesa en dispositivos pequeños */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    background-color:#777;
+    /* para fusiona las capas de fondo y la imagen */
+    background-blend-mode: multiply;
+    
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.hero h1{
+    font-family: var(--fuente-secundaria);
+    font-size: 2.25em;
+}
+
+.hero h2{
+    color: var(--color-principal);
+    margin: var(--margingrid) 0;
+    font-size: 1.25em;
+
+}
+.hero p{
+    font-size: 1.15em;
+}
+
+.hero .social li{
+    display: inline-block;
+    margin-right: var(--margingrid);
+    font-size: 2em;
+    
+}
+
+.hero .social li a{
+    color: white;
+}
+
+.boton {
+    background-color: var(--color-principal);
+    color: white;
+    display: inline-block;
+    padding: 1.15em;
+    margin: var(--margingrid) 0;
+    text-decoration: none;
+    border: 1px solid var(--color-principal);
+}
+
+.boton:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+}
+
+.boton:hover i{
+    transform: translateX(5px);
+    transition: 0.5s;
+}
+
+/* FINAL HERO */
+
+
+
+/* INICIO OUR SERVICE */
+
+main section{
+    padding: 2.125em 1.5em;
+}
+
+main section h2{
+    color: black;
+    font-family: var(--fuente-secundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span{
+    color: var(--color-principal);
+
+}
+
+main section .underline{
+    /* contenedor de elementos en los que se les va a aplicar cambio de eje */
+    position: relative;
+    width: 6.250em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700; /* este 700 es de la fuente tipografica */
+    text-align: center;
+    margin-bottom: calc(var(--margingrid)*1.5);
+}
+
+main section .underline hr{
+    /* al ponerlo en posicion absolute sale del flujo y se superpone con la X, al hacer esto visulamente desaparaece xq no sabe que espacio ocupa, es por ello que hay que darle un ancho */
+    position: absolute;
+    width: 100%;
+    top: -1px; /* esto es para que la linea quede exactamente al medio de la X  */
+    border-color: var(--color-principal);
+}
+
+main #ourservices .grid{
+    display: grid;
+    gap: var(--margingrid);
+}
+
+main #ourservices .grid article {
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+
+}
+
+main section h3{
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: var(--padding) 0;
+}
+
+.enlace{
+    color: var(--color-principal);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: var(--padding);
+    font-weight: 700;
+}
+.enlace i{
+    transition: 0.5s;
+
+}
+.enlace:hover i{
+    transform: translateX(5px);
+}
+
+main #ourservices article>div .fas{
+    color: var(--color-principal);
+    font-size: 1.5em;
+    border: 1px solid var(--color-principal);
+    padding: 0.5em;
+}
+
+.fa-truck{
+    transform: rotateY(180deg);
+}
+
+
+
+/* FIN OUR SERVICE */
+
+/* INICIO ABOUT US */
+
+main section:last-child{
+    padding-bottom: 90px;
+}
+main section h4{
+    color: var(--color-principal);
+    margin: var(--margingrid) 0;
+}
+main section .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+main section .flex .columna{
+    margin: 0 var(--margingrid);
+}
+
+main .imagen .marco{
+    border: 4px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main .imagen .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main .imagen:hover .marco{
+    transform: rotateZ(0deg);
+    
+}
+
+main .imagen:hover .marco img{
+    transform: rotateZ(0deg);
+}
+/* FIN ABOUT US */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIAQUERIS */
+
+@media(min-width: 600px){
+    main #ourservices .grid{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    main #ourservices .grid article:last-child{
+        grid-column: 1/3;
+    }
+    main #ourservices .grid article {
+        border-bottom: none;
+        border-left: 1px solid #aaa;
+        padding: 1.5em;
+    
+    }
+    main section .flex{
+        flex-direction: row;
+    }
+}
+
+@media(min-width: 768px){
+    header .nav-top a span{
+        display: inline;
+        color: white;
+        font-size: 110%;
+        margin-left: 5px;
+    }
+    main #ourservices .grid{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+    main #ourservices .grid article:last-child{
+        grid-column: 3/4;
+    }
+
+
+}
+
+@media(min-width: 1004px){
+    header nav .hamburguesa{
+        display: none;
+    }
+    header nav ul{
+        width: auto;
+    }
+    header nav .menu li{
+        display: inline-block;
+    }
+    header nav .menu li a{
+        padding: 0.5em var(--padding);
+        border-bottom: none;
+    }
+    header{
+        box-shadow: 0px 1px 15px gray;
+    }
+    footer{
+        text-align: left;
+    }
+    
+}
