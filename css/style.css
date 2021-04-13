@@ -319,6 +319,26 @@ main #ourservices article>div .fas{
 
 /* FIN OUR SERVICE */
 
+/* INICIO ABOUT US */
+
+main section:last-child{
+    padding-bottom: 90px;
+}
+main section h4{
+    color: var(--color-principal);
+    margin: var(--margingrid) 0;
+}
+main section .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+main section .flex .columna{
+    margin: 0 var(--margingrid);
+}
+
+
+/* FIN ABOUT US */
 
 
 
@@ -348,6 +368,9 @@ main #ourservices article>div .fas{
         padding: 1.5em;
     
     }
+    main section .flex{
+        flex-direction: row;
+    }
 }
 
 @media(min-width: 768px){
@@ -364,6 +387,8 @@ main #ourservices article>div .fas{
     main #ourservices .grid article:last-child{
         grid-column: 3/4;
     }
+
+
 }
 
 @media(min-width: 1004px){
