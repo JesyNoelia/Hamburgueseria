@@ -358,7 +358,73 @@ main .imagen:hover .marco img{
 }
 /* FIN ABOUT US */
 
+/* INICIO SECCION MENU */
+.seccion-menu{
+    background-color: var(--color-secundario);
+   padding: 0 4em;
+}
+.seccion-menu section .flex{
+    margin-top: 4em;
 
+}
+.seccion-menu section h2, .seccion-menu section h3{
+    color: white;
+    margin-top: 1.5em;
+}
+.seccion-menu .menu-nav{
+    margin-bottom: 3em;
+}
+
+.seccion-menu .menu-nav li{
+    background-color:var(--color-secundario);
+    border-radius: 5px;
+}
+
+.seccion-menu .menu-nav li a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: calc(var(--padding)*1.5);
+    color:white;
+}
+.seccion-menu .menu-nav li:hover{
+    background-color: var(--color-principal);
+}
+
+.seccion-menu .underline-menu{
+    width: 3em;
+    margin: 1.2em 0;
+}
+.seccion-menu .underline-menu hr{
+    width: 3em;
+    color: var(--color-principal);
+}
+.seccion-menu p{
+    color: #aaa;
+}
+
+.lateral{
+    margin-bottom: 2em;
+}
+
+
+.offers div{
+    margin-bottom: 2em;
+}
+
+.offers h3 span{
+    color: var(--color-principal);
+}
+main section .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-menu section{
+    padding: 2.125em 0;
+}
+
+/* FIN SECCION MENU */
 
 
 
@@ -384,10 +450,20 @@ main .imagen:hover .marco img{
         border-bottom: none;
         border-left: 1px solid #aaa;
         padding: 1.5em;
-    
     }
     main section .flex{
         flex-direction: row;
+    }
+
+    .lateral{
+        margin-right: 1.5em;
+        flex-basis: 40%;
+    }
+    .offers{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+
     }
 }
 
@@ -404,6 +480,30 @@ main .imagen:hover .marco img{
     }
     main #ourservices .grid article:last-child{
         grid-column: 3/4;
+    }
+
+    
+    .offers{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 70%;
+
+    }
+    .offers .row{
+      display: flex;
+      flex-direction: row;
+    }
+    .offers .row div{
+        margin-left: 2em;
+    }
+    .seccion-menu section h3{
+        margin-top: 0;
+    }
+    .text{
+        width: 100%;
+    }
+    .imagen-menu{
+        width: 50%;
     }
 
 
