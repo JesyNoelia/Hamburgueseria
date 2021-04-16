@@ -427,6 +427,42 @@ main section .flex{
 /* FIN SECCION MENU */
 
 
+/*INICIO OUR BLOG*/
+
+main #ourservices #grid{
+    display: grid;
+    gap: var(--margingrid);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main #ourservices #grid article {
+    padding: 1.5em 0;
+
+}
+
+
+main #ourservices #grid article {
+    position: relative;
+}
+
+main #ourservices #grid article .fecha{
+    position: absolute;
+    background-color: rgba(255,0,0,0.5);
+    color: white;
+    padding: var(--padding);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 24px;
+
+}
+
+
+/*FIN OUR BLOG*/
 
 
 
@@ -507,6 +543,7 @@ main section .flex{
     }
 
 
+
 }
 
 @media(min-width: 1004px){
@@ -528,6 +565,10 @@ main section .flex{
     }
     footer{
         text-align: left;
+    }
+    main #ourservices #grid{
+        grid-template-columns: repeat(3, 1fr);
+
     }
     
 }
