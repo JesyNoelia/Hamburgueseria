@@ -322,7 +322,7 @@ main #ourservices article>div .fas{
 /* INICIO ABOUT US */
 
 main section:last-child{
-    padding-bottom: 90px;
+    padding-bottom: 120px;
 }
 main section h4{
     color: var(--color-principal);
