@@ -86,12 +86,11 @@ header nav .logo img{
 
 header nav ul{
     width: 100%;
-    
 }
+
 header nav .hamburguesa{
     /* cursor pointer hacer que funcione como un enlace */
     cursor: pointer;
-    
 }
 
 
@@ -174,7 +173,6 @@ footer a:hover{
     background-color:#777;
     /* para fusiona las capas de fondo y la imagen */
     background-blend-mode: multiply;
-    
 }
 
 .hero .container{
@@ -193,7 +191,6 @@ footer a:hover{
     color: var(--color-principal);
     margin: var(--margingrid) 0;
     font-size: 1.25em;
-
 }
 .hero p{
     font-size: 1.15em;
@@ -203,7 +200,6 @@ footer a:hover{
     display: inline-block;
     margin-right: var(--margingrid);
     font-size: 2em;
-    
 }
 
 .hero .social li a{
@@ -250,7 +246,6 @@ main section h2{
 
 main section h2 span{
     color: var(--color-principal);
-
 }
 
 main section .underline{
@@ -280,7 +275,6 @@ main #ourservices .grid{
 main #ourservices .grid article {
     border-bottom: 1px solid #aaa;
     padding: 1.5em 0;
-
 }
 
 main section h3{
@@ -315,14 +309,13 @@ main #ourservices article>div .fas{
     transform: rotateY(180deg);
 }
 
-
-
 /* FIN OUR SERVICE */
+
 
 /* INICIO ABOUT US */
 
 main section:last-child{
-    padding-bottom: 90px;
+    padding-bottom: 120px;
 }
 main section h4{
     color: var(--color-principal);
@@ -350,7 +343,6 @@ main .imagen .marco img{
 
 main .imagen:hover .marco{
     transform: rotateZ(0deg);
-    
 }
 
 main .imagen:hover .marco img{
@@ -360,11 +352,136 @@ main .imagen:hover .marco img{
 
 
 
+/* INICIO SECCION MENU */
+.seccion-menu{
+    background-color: var(--color-secundario);
+   padding: 0 4em;
+}
+.seccion-menu section .flex{
+    margin-top: 4em;
+
+}
+.seccion-menu section h2, .seccion-menu section h3{
+    color: white;
+    margin-top: 1.5em;
+}
+.seccion-menu .menu-nav{
+    margin-bottom: 3em;
+}
+
+.seccion-menu .menu-nav li{
+    background-color:var(--color-secundario);
+    border-radius: 5px;
+}
+
+.seccion-menu .menu-nav li a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: calc(var(--padding)*1.5);
+    color:white;
+}
+.seccion-menu .menu-nav li:hover{
+    background-color: var(--color-principal);
+}
+
+.seccion-menu .underline-menu{
+    width: 3em;
+    margin: 1.2em 0;
+}
+.seccion-menu .underline-menu hr{
+    width: 3em;
+    color: var(--color-principal);
+}
+.seccion-menu p{
+    color: #aaa;
+}
+
+.lateral{
+    margin-bottom: 2em;
+}
+
+.offers div{
+    margin-bottom: 2em;
+}
+
+.offers h3 span{
+    color: var(--color-principal);
+}
+main section .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-menu section{
+    padding: 2.125em 0;
+}
+
+/* FIN SECCION MENU */
 
 
 
+/*INICIO OUR BLOG*/
+
+main #ourservices #grid{
+    display: grid;
+    gap: var(--margingrid);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main #ourservices #grid article {
+    padding: 1.5em 0;
+}
+
+main #ourservices #grid article {
+    position: relative;
+}
+
+main #ourservices #grid article .fecha{
+    position: absolute;
+    background-color: rgba(255,0,0,0.5);
+    color: white;
+    padding: var(--padding);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 24px;
+}
+/*FIN OUR BLOG*/
 
 
+
+/*INICIO EQUIPO*/
+main #ourservices #gridteam{
+ display: flex;  
+ flex-direction: column;
+}
+main #ourservices #gridteam .cocina {
+    display: flex;
+    flex-direction: column;
+   }
+main #ourservices #gridteam .cocina div{
+    margin: calc(var(--margingrid)*2);
+    text-align: center;
+   }
+
+main #ourservices #gridteam .equipo{
+    display: flex;
+    flex-direction: row;
+}
+main #ourservices #gridteam .equipo div{
+    margin: var(--margingrid);
+    text-align: center;
+}
+main #ourservices #gridteam .equipo img{
+    border-radius: 50%;
+}
+
+/*FIN EQUIPO*/
 
 
 
@@ -375,7 +492,6 @@ main .imagen:hover .marco img{
 @media(min-width: 600px){
     main #ourservices .grid{
         grid-template-columns: repeat(2, 1fr);
-        
     }
     main #ourservices .grid article:last-child{
         grid-column: 1/3;
@@ -384,11 +500,29 @@ main .imagen:hover .marco img{
         border-bottom: none;
         border-left: 1px solid #aaa;
         padding: 1.5em;
-    
     }
     main section .flex{
         flex-direction: row;
     }
+
+    .lateral{
+        margin-right: 1.5em;
+        flex-basis: 40%;
+    }
+    .offers{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+    }
+
+    main #ourservices #gridteam .cocina {
+        display: flex;
+        flex-direction: row;
+       }
+    main #ourservices #gridteam .cocina div{
+        margin: var(--margingrid);
+    }
+
 }
 
 @media(min-width: 768px){
@@ -405,6 +539,39 @@ main .imagen:hover .marco img{
     main #ourservices .grid article:last-child{
         grid-column: 3/4;
     }
+
+    
+    .offers{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 70%;
+    }
+    .offers .row{
+      display: flex;
+      flex-direction: row;
+    }
+    .offers .row div{
+        margin-left: 2em;
+    }
+    .seccion-menu section h3{
+        margin-top: 0;
+    }
+    .text{
+        width: 100%;
+    }
+    .imagen-menu{
+        width: 50%;
+    }
+
+   
+    main #ourservices #gridteam{
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    
+
+
 
 
 }
@@ -428,6 +595,10 @@ main .imagen:hover .marco img{
     }
     footer{
         text-align: left;
+    }
+    main #ourservices #grid{
+        grid-template-columns: repeat(3, 1fr);
+
     }
     
 }
